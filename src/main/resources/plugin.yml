@@ -21,8 +21,8 @@ commands:
     usage: /wyplac <kwota|all>
   tweconomy:
     description: Administracja ekonomią.
-    usage: /tweconomy <balance|setwallet|setbank|addwallet|addbank|reload> ...
-    aliases: [twe, economyadmin]
+    usage: /eco <balance|give|take|set|bank|reload> ...
+    aliases: [twe, economyadmin, eco]
 
 permissions:
   twoworldeconomy.admin:

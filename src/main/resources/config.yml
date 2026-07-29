@@ -1,4 +1,4 @@
-# TwoWorldEconomy 3.0.0-alpha.1
+# TwoWorldEconomy 3.0.0-alpha.2
 # Plugin celowo NIE tworzy scoreboardu. Sidebar kontroluje wyłącznie HubCore.
 
 currency:
@@ -16,7 +16,7 @@ bank-gui:
   enabled: true
   title: "&8Bank"
   size: 54
-  transaction-cooldown-millis: 120
+  transaction-cooldown-millis: 75
   amounts:
     deposit: [10, 100, 1000, 10000]
     withdraw: [10, 100, 1000, 10000]
@@ -34,3 +34,15 @@ messages:
   not-enough-wallet: "&cNie masz wystarczającej ilości pieniędzy w portfelu."
   not-enough-bank: "&cNie masz wystarczającej ilości pieniędzy w banku."
   reloaded: "&aKonfiguracja została przeładowana."
+
+wallet-item:
+  enabled: true
+  slot: 7
+  material: SUNFLOWER
+  remove-when-empty: true
+  name: "&a&l$ PORTFEL"
+  lore:
+    - "&7Saldo: &a%wallet%"
+    - ""
+    - "&eKliknij PPM, aby otworzyć bank."
+    - "&8Przedmiotu nie można przenieść ani wyrzucić."
