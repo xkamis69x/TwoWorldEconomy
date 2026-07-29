@@ -1,0 +1,33 @@
+name: TwoWorldEconomy
+version: '${version}'
+main: pl.kamil.twoworldeconomy.TwoWorldEconomyPlugin
+api-version: '1.21'
+author: xkamis69x
+description: Portfel i bank z publicznym API dla HubCore.
+
+commands:
+  hajs:
+    description: Pokazuje saldo portfela.
+    usage: /hajs [gracz]
+    aliases: [wallet, portfel]
+  bank:
+    description: Otwiera bank lub pokazuje saldo.
+    usage: /bank [saldo]
+  wplac:
+    description: Wpłaca pieniądze z portfela do banku.
+    usage: /wplac <kwota|all>
+  wyplac:
+    description: Wypłaca pieniądze z banku do portfela.
+    usage: /wyplac <kwota|all>
+  tweconomy:
+    description: Administracja ekonomią.
+    usage: /tweconomy <balance|setwallet|setbank|addwallet|addbank|reload> ...
+    aliases: [twe, economyadmin]
+
+permissions:
+  twoworldeconomy.admin:
+    description: Dostęp do komend administracyjnych.
+    default: op
+  twoworldeconomy.balance.others:
+    description: Podgląd salda innych graczy.
+    default: op

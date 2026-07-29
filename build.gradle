@@ -1,0 +1,41 @@
+plugins {
+    id 'java'
+}
+
+group = 'pl.kamil'
+version = '3.0.0-alpha.1'
+
+def targetJavaVersion = 21
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(targetJavaVersion)
+    }
+}
+
+repositories {
+    mavenCentral()
+    maven { url = 'https://repo.papermc.io/repository/maven-public/' }
+}
+
+dependencies {
+    compileOnly 'io.papermc.paper:paper-api:1.21.5-R0.1-SNAPSHOT'
+}
+
+tasks.withType(JavaCompile).configureEach {
+    options.encoding = 'UTF-8'
+    options.release = targetJavaVersion
+}
+
+processResources {
+    filesMatching('plugin.yml') {
+        expand(version: project.version)
+    }
+}
+
+jar {
+    archiveBaseName = 'TwoWorldEconomy'
+    manifest {
+        attributes('Implementation-Version': project.version)
+    }
+}

@@ -1,0 +1,36 @@
+# TwoWorldEconomy 3.0.0-alpha.1
+# Plugin celowo NIE tworzy scoreboardu. Sidebar kontroluje wyłącznie HubCore.
+
+currency:
+  symbol: "$"
+  decimals: 2
+
+starting-balance:
+  wallet: 0.0
+  bank: 0.0
+
+storage:
+  autosave-seconds: 60
+
+bank-gui:
+  enabled: true
+  title: "&8Bank"
+  size: 54
+  transaction-cooldown-millis: 120
+  amounts:
+    deposit: [10, 100, 1000, 10000]
+    withdraw: [10, 100, 1000, 10000]
+
+messages:
+  prefix: "&8[&6TwoWorldEconomy&8] "
+  no-permission: "&cNie masz uprawnień."
+  player-only: "&cTej komendy może użyć tylko gracz."
+  player-not-found: "&cNie znaleziono gracza: &f{player}&c."
+  invalid-amount: "&cPodaj poprawną kwotę większą od zera."
+  wallet-balance: "&7Saldo portfela: &a{wallet}"
+  bank-balance: "&7Saldo banku: &e{bank}"
+  deposited: "&aWpłacono &f{amount}&a do banku."
+  withdrawn: "&aWypłacono &f{amount}&a z banku."
+  not-enough-wallet: "&cNie masz wystarczającej ilości pieniędzy w portfelu."
+  not-enough-bank: "&cNie masz wystarczającej ilości pieniędzy w banku."
+  reloaded: "&aKonfiguracja została przeładowana."
